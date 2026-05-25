@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Schermo dashboard -->
+  <rect x="6" y="10" width="52" height="36" rx="4" fill="#1a1a2e" stroke="#3a3a55" stroke-width="1.5"/>
+  <rect x="10" y="14" width="44" height="28" rx="2" fill="#232336"/>
+  <!-- Grafico a barre stilizzato -->
+  <rect x="14" y="32" width="6" height="8" rx="1" fill="#4a9e3f"/>
+  <rect x="22" y="26" width="6" height="14" rx="1" fill="#4a9e3f"/>
+  <rect x="30" y="22" width="6" height="18" rx="1" fill="#f7c948"/>
+  <rect x="38" y="28" width="6" height="12" rx="1" fill="#4a9e3f"/>
+  <rect x="46" y="24" width="6" height="16" rx="1" fill="#e8873a"/>
+  <!-- Indicatore LIVE -->
+  <circle cx="46" cy="17" r="3" fill="#4a9e3f"/>
+  <text x="52" y="20" font-family="Nunito,sans-serif" font-size="7" font-weight="800" fill="#4a9e3f">LIVE</text>
+  <!-- Base monitor -->
+  <rect x="28" y="46" width="8" height="6" fill="#2a2a3e"/>
+  <rect x="22" y="52" width="20" height="3" rx="1.5" fill="#2a2a3e"/>
+</svg>

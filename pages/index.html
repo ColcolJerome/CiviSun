@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home · CiviSun</title>
+<meta name="description" content="CiviSun — Comunità Energetiche Rinnovabili. Consulenza GSE e CER Monitor SaaS. Dalmine (BG).">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Patrick+Hand&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+<style>
+/* ── COLLAGE HERO PHOTO ─────────────────────────────────────── */
+.collage-hero-photo {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 560px;
+  filter: drop-shadow(6px 10px 28px rgba(61,43,26,0.18));
+}
+.hero-real-photo {
+  width: 100%; height: auto;
+  border-radius: 6px;
+  border: 4px solid white;
+  display: block;
+  transform: rotate(-1.2deg);
+  box-shadow: 5px 8px 0 var(--pd), 8px 12px 32px rgba(61,43,26,0.12);
+}
+/* Nastri adesivi sugli angoli */
+.photo-tape {
+  position: absolute;
+  width: 68px; height: 22px;
+  background: rgba(247,201,72,0.60);
+  border-radius: 2px;
+  border: 1px solid rgba(247,201,72,0.9);
+  z-index: 2;
+  backdrop-filter: blur(1px);
+}
+.photo-tape::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0px, transparent 4px, rgba(255,255,255,0.2) 4px, rgba(255,255,255,0.2) 5px);
+  border-radius: 2px;
+}
+.photo-tape-tl { top: -10px; left: 30px; transform: rotate(-4deg); }
+.photo-tape-tr { top: -10px; right: 30px; transform: rotate(4deg); }
+
+/* Didascalia sotto la foto (stile album) */
+.photo-caption {
+  background: white;
+  border: 1.5px solid var(--pd);
+  border-top: none;
+  padding: 7px 14px;
+  display: flex; align-items: center; gap: 6px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 12px; color: var(--brown);
+  border-radius: 0 0 6px 6px;
+  margin-top: -4px;
+}
+/* Badge risparmio flottante */
+.photo-badge-float {
+  position: absolute;
+  top: 14px; right: -18px;
+  background: var(--yellow);
+  border: 2.5px solid white;
+  border-radius: 50%;
+  width: 82px; height: 82px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+  transform: rotate(8deg);
+  z-index: 3;
+}
+.photo-badge-num {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900; font-size: 1.3rem;
+  color: var(--gd); line-height: 1;
+}
+.photo-badge-lbl {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 10px; color: var(--bd);
+}
+/* Post-it angolo in basso a sinistra */
+.photo-postit-corner {
+  position: absolute;
+  bottom: 36px; left: -16px;
+  background: #d4f0d4;
+  border-radius: 4px;
+  padding: 8px 12px;
+  box-shadow: 2px 3px 0 rgba(0,0,0,0.1);
+  transform: rotate(-3deg);
+  z-index: 3;
+  border: 1px solid rgba(74,158,63,0.3);
+}
+@media (max-width: 600px) {
+  .photo-badge-float { right: 6px; width: 66px; height: 66px; }
+  .photo-postit-corner { left: 6px; }
+}
+</style>
+</head>
+<body>
+<div id="loader">
+  <div style="position:relative;display:flex;align-items:center;justify-content:center">
+    <div id="loader-ring"></div>
+    <img id="loader-logo-img" src="../assets/img/logo-kraft.jpg" alt="CiviSun logo">
+  </div>
+  <div id="loader-brand">CiviSun</div>
+  <div id="loader-tagline">Energia per la Comunità</div>
+  <div class="loader-dots">
+    <div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div>
+  </div>
+</div>
+<div id="progress-bar"></div>
+<button id="back-top" aria-label="Torna in cima">
+  <svg viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="../assets/img/logo-kraft.jpg" alt="CiviSun">
+    <span class="nav-logo-text">Civi<span>Sun</span></span>
+  </a>
+  <ul class="nav-links"><li><a href="chi-siamo.html" data-it="Chi Siamo" data-en="About" class="i18n">Chi Siamo</a></li>
+    <li><a href="servizi.html" data-it="Servizi" data-en="Services" class="i18n">Servizi</a></li>
+    <li><a href="cer-monitor.html" data-it="CER Monitor" data-en="CER Monitor" class="i18n">CER Monitor</a></li>
+    <li><a href="notizie.html" data-it="Notizie" data-en="News" class="i18n">Notizie</a></li>
+    <li><a href="eventi.html" data-it="Eventi" data-en="Events" class="i18n">Eventi</a></li>
+    <li><a href="contatti.html" data-it="Contatti" data-en="Contact" class="i18n">Contatti</a></li>
+    </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a class="btn-nav" href="contatti.html" data-it="Diventa Socio" data-en="Join Us" class="i18n">Diventa Socio</a>
+    <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="chi-siamo.html"   data-it="Chi Siamo"   data-en="About"       class="i18n">Chi Siamo</a>
+  <a href="servizi.html"     data-it="Servizi"      data-en="Services"    class="i18n">Servizi</a>
+  <a href="cer-monitor.html" data-it="CER Monitor"  data-en="CER Monitor" class="i18n">CER Monitor</a>
+  <a href="notizie.html"     data-it="Notizie"      data-en="News"        class="i18n">Notizie</a>
+  <a href="eventi.html"      data-it="Eventi"       data-en="Events"      class="i18n">Eventi</a>
+  <a href="contatti.html"    data-it="Contatti"     data-en="Contact"     class="i18n">Contatti</a>
+</div>
+<div id="site" style="opacity:0">
+
+<!-- ══ HERO ══ -->
+<section class="page-hero hero-home watermark-section">
+  <div class="hero-inner">
+    <div class="reveal-left">
+      <p style="font-family:'Patrick Hand',cursive;font-size:14px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:8px">
+        <img src="../assets/svg/icons/leaf.svg" width="20" height="20" alt="">
+        <span data-it="Startup italiana · Dalmine (BG) · Pre-seed" data-en="Italian startup · Dalmine (BG) · Pre-seed" class="i18n">Startup italiana · Dalmine (BG) · Pre-seed</span>
+      </p>
+      <h1>
+        <span data-it="L'energia solare" data-en="Solar energy" class="i18n">L'energia solare</span><br>
+        <span class="hl-yellow" data-it="è di tutti." data-en="belongs to everyone." class="i18n">è di tutti.</span>
+      </h1>
+      <p class="lead" style="margin-top:20px;max-width:480px"
+         data-it="CiviSun guida condomini, PMI e comuni nel costituire, attivare e monitorare la propria Comunità Energetica Rinnovabile — tagliando le bollette e incassando gli incentivi GSE."
+         data-en="CiviSun guides condominiums, SMEs, and municipalities in setting up, activating, and monitoring their Renewable Energy Community — cutting utility bills and collecting GSE incentives." class="i18n">
+        CiviSun guida condomini, PMI e comuni nel costituire, attivare e monitorare la propria Comunità Energetica Rinnovabile — tagliando le bollette e incassando gli incentivi GSE.
+      </p>
+      <div class="hero-cta">
+        <a href="servizi.html" class="btn-primary">
+          <img src="../assets/svg/icons/solar-panel.svg" width="20" height="20" alt="">
+          <span data-it="Scopri i servizi" data-en="Explore services" class="i18n">Scopri i servizi</span>
+        </a>
+        <a href="cer-monitor.html" class="btn-secondary">
+          <img src="../assets/svg/icons/monitoring.svg" width="20" height="20" alt="">
+          CER Monitor
+        </a>
+      </div>
+      <!-- Pill partner istituzionali -->
+      <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+        <span style="font-family:'Patrick Hand',cursive;font-size:12px;color:var(--bl)">Riconosciuto da:</span>
+        <span class="badge badge-green">GSE</span>
+        <span class="badge badge-yellow">PNRR</span>
+        <span class="badge" style="background:var(--rlight);color:var(--rust)">Terna</span>
+        <span class="badge" style="background:var(--pd);color:var(--brown)">RSE</span>
+      </div>
+    </div>
+
+    <!-- Illustrazione SVG hero -->
+    <div class="reveal-right" style="transition-delay:0.15s">
+      <div class="collage-hero-photo">
+  <!-- Foto reale da Unsplash: pannelli solari su tetto italiano -->
+  <div class="photo-tape photo-tape-tl"></div>
+  <div class="photo-tape photo-tape-tr"></div>
+  <img
+    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=580&h=440&q=82"
+    alt="Pannelli solari su tetto — Comunità Energetica Rinnovabile"
+    class="hero-real-photo"
+    loading="eager"
+    onerror="this.src='../assets/svg/illustrations/hero-home.svg'"
+  >
+  <div class="photo-caption">
+    <img src="../assets/svg/icons/solar-panel.svg" width="14" height="14" alt="">
+    <span data-it="Pannelli fotovoltaici · CER attiva · Bergamo 2025" data-en="Solar panels · Active CER · Bergamo 2025" class="i18n">Pannelli fotovoltaici · CER attiva · Bergamo 2025</span>
+  </div>
+  <!-- Badge flottante giallo -->
+  <div class="photo-badge-float">
+    <span class="photo-badge-num">−38%</span>
+    <span class="photo-badge-lbl" data-it="in bolletta" data-en="on bills" class="i18n">in bolletta</span>
+  </div>
+  <!-- Post-it angolo -->
+  <div class="photo-postit-corner">
+    <div style="font-family:'Patrick Hand',cursive;font-size:12px;color:var(--bd)">110 €/MWh<br><span style="font-size:10px">incentivi GSE</span></div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WAVE DIVIDER ══ -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 Q180,0 360,30 Q540,60 720,30 Q900,0 1080,30 Q1260,60 1440,30 L1440,60 L0,60 Z" fill="#f5efe0"/>
+  </svg>
+</div>
+
+<!-- ══ STATS BANNER ══ -->
+<section id="stats-section" class="section-green watermark-section" style="padding:56px 2.5rem">
+  <div class="wrap">
+    <p class="text-center" style="font-family:'Patrick Hand',cursive;font-size:14px;color:var(--ylight);margin-bottom:32px"
+       data-it="Il nostro impatto nel 2025 — dati aggiornati" data-en="Our 2025 impact — updated data" class="i18n">
+      Il nostro impatto nel 2025 — dati aggiornati
+    </p>
+    <div class="grid-4">
+      <div class="postit" style="--r:-2deg;text-align:center">
+        <div class="n" data-counter="28" data-duration="1800" style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--bd)">28</div>
+        <span style="font-size:13px;display:block;margin-top:6px" data-it="CER seguite" data-en="CERs monitored" class="i18n">CER seguite</span>
+      </div>
+      <div class="postit" style="--r:1.5deg;text-align:center;background:white">
+        <div class="n" data-counter="1240" data-duration="2000" style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--gd)">1.240</div>
+        <span style="font-size:13px;color:var(--brown);display:block;margin-top:6px" data-it="MWh monitorati" data-en="MWh monitored" class="i18n">MWh monitorati</span>
+      </div>
+      <div class="postit" style="--r:-1deg;text-align:center;background:var(--orange)">
+        <div class="n" data-counter="620" data-duration="1800" style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:white">620</div>
+        <span style="font-size:13px;color:rgba(255,255,255,0.85);display:block;margin-top:6px" data-it="ton CO₂ evitate" data-en="tonnes CO₂ avoided" class="i18n">ton CO₂ evitate</span>
+      </div>
+      <div class="postit" style="--r:2deg;text-align:center">
+        <div class="n" data-counter="14" data-duration="1600" style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--bd)">14</div>
+        <span style="font-size:13px;display:block;margin-top:6px" data-it="Comuni coinvolti" data-en="Municipalities" class="i18n">Comuni coinvolti</span>
+      </div>
+    </div>
+    <p class="text-center" style="margin-top:28px;font-family:'Patrick Hand',cursive;font-size:13px;color:rgba(255,255,255,0.7)"
+       data-it="Oltre 60.000 CER potenziali in Italia — siamo appena all'inizio." data-en="Over 60,000 potential CERs in Italy — we're just getting started." class="i18n">
+      Oltre 60.000 CER potenziali in Italia — siamo appena all'inizio.
+    </p>
+  </div>
+</section>
+
+<!-- ══ WAVE DIVIDER ══ -->
+<div class="wave-divider" style="background:#4a9e3f">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,20 Q360,60 720,20 Q1080,-20 1440,20 L1440,60 L0,60 Z" fill="var(--cream)"/>
+  </svg>
+</div>
+
+<!-- ══ SERVIZI PREVIEW ══ -->
+<section class="section-pad watermark-section">
+  <div class="wrap">
+    <div class="reveal text-center" style="max-width:560px;margin:0 auto 44px">
+      <span class="eyebrow" data-it="Cosa facciamo" data-en="What we do" class="i18n">Cosa facciamo</span>
+      <h2 style="margin-top:8px" data-it="Due strumenti, una visione" data-en="Two tools, one vision" class="i18n">Due strumenti, una visione</h2>
+      <p style="margin-top:12px" data-it="Dalla burocrazia GSE alla dashboard real-time: CiviSun copre l'intero ciclo di vita della tua CER." data-en="From GSE bureaucracy to the real-time dashboard: CiviSun covers the entire lifecycle of your CER." class="i18n">Dalla burocrazia GSE alla dashboard real-time.</p>
+    </div>
+    <div class="grid-2">
+      <!-- Card Consulenza -->
+      <div class="card reveal" style="padding:36px;transition-delay:0.1s">
+        <img src="../assets/svg/icons/community.svg" width="64" height="64" alt="" style="margin-bottom:18px">
+        <h3 data-it="Consulenza CER" data-en="CER Consulting" class="i18n">Consulenza CER</h3>
+        <p style="margin-top:10px" data-it="Ti guidiamo dalla prima analisi di fattibilità alla pratica GSE — statuto, atto costitutivo, accesso PNRR. Noi gestiamo la burocrazia, tu incassi gli incentivi." data-en="We guide you from the first feasibility analysis to the GSE filing — charter, founding act, PNRR access. We handle the bureaucracy, you collect the incentives." class="i18n">Ti guidiamo dalla prima analisi di fattibilità alla pratica GSE.</p>
+        <ul style="list-style:none;margin:18px 0 24px">
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid var(--pd);font-size:.9rem;color:var(--brown)">
+            <img src="../assets/svg/icons/leaf.svg" width="18" height="18" alt="" style="flex-shrink:0;margin-top:2px">
+            <span data-it="Analisi di fattibilità e simulazione incentivi GSE" data-en="Feasibility analysis and GSE incentive simulation" class="i18n">Analisi di fattibilità e simulazione incentivi GSE</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid var(--pd);font-size:.9rem;color:var(--brown)">
+            <img src="../assets/svg/icons/leaf.svg" width="18" height="18" alt="" style="flex-shrink:0;margin-top:2px">
+            <span data-it="Redazione statuto e atto costitutivo CER" data-en="Drafting CER charter and founding act" class="i18n">Redazione statuto e atto costitutivo CER</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;font-size:.9rem;color:var(--brown)">
+            <img src="../assets/svg/icons/leaf.svg" width="18" height="18" alt="" style="flex-shrink:0;margin-top:2px">
+            <span data-it="Supporto pratiche GSE e fondi PNRR" data-en="GSE support and PNRR funding" class="i18n">Supporto pratiche GSE e fondi PNRR</span>
+          </li>
+        </ul>
+        <a href="servizi.html" class="btn-primary" style="width:100%;justify-content:center">
+          <span data-it="Scopri la consulenza" data-en="Explore consulting" class="i18n">Scopri la consulenza</span> →
+        </a>
+      </div>
+      <!-- Card Monitor -->
+      <div class="card-dark reveal" style="padding:36px;transition-delay:0.2s;position:relative">
+        <span class="badge badge-dark" style="position:absolute;top:-14px;right:20px">★ SaaS</span>
+        <img src="../assets/svg/icons/monitoring.svg" width="64" height="64" alt="" style="margin-bottom:18px">
+        <h3 style="color:white" data-it="CER Monitor" data-en="CER Monitor" class="i18n">CER Monitor</h3>
+        <p style="margin-top:10px;color:var(--paper)" data-it="La dashboard SaaS proprietaria di CiviSun. Monitoraggio live di produzione, consumo e incentivi. Grafici avanzati, report automatici, app mobile." data-en="CiviSun's proprietary SaaS dashboard. Live monitoring of production, consumption and incentives. Advanced charts, automatic reports, mobile app." class="i18n">La dashboard SaaS proprietaria per monitorare la tua CER in tempo reale.</p>
+        <ul style="list-style:none;margin:18px 0 24px">
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:.9rem;color:var(--paper)">
+            <img src="../assets/svg/icons/lightning.svg" width="18" height="18" alt="" style="flex-shrink:0;margin-top:2px">
+            <span data-it="Aggiornamento ogni 15 min dai contatori GSE" data-en="Updated every 15 min from GSE meters" class="i18n">Aggiornamento ogni 15 min dai contatori GSE</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:.9rem;color:var(--paper)">
+            <img src="../assets/svg/icons/lightning.svg" width="18" height="18" alt="" style="flex-shrink:0;margin-top:2px">
+            <span data-it="Grafici interattivi e report automatici PDF" data-en="Interactive charts and automatic PDF reports" class="i18n">Grafici interattivi e report automatici PDF</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;font-size:.9rem;color:var(--paper)">
+            <img src="../assets/svg/icons/lightning.svg" width="18" height="18" alt="" style="flex-shrink:0;margin-top:2px">
+            <span data-it="App mobile per i soci · dark &amp; light mode" data-en="Mobile app for members · dark &amp; light mode" class="i18n">App mobile per i soci · dark &amp; light mode</span>
+          </li>
+        </ul>
+        <a href="cer-monitor.html" class="btn-yellow" style="width:100%;justify-content:center">
+          <span data-it="Scopri CER Monitor" data-en="Discover CER Monitor" class="i18n">Scopri CER Monitor</span> →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COME FUNZIONA PREVIEW ══ -->
+<section class="section-pad" style="background:var(--paper)" >
+  <div class="wrap">
+    <div class="reveal text-center" style="max-width:560px;margin:0 auto 44px">
+      <span class="eyebrow" data-it="Il processo" data-en="The process" class="i18n">Il processo</span>
+      <h2 style="margin-top:8px" data-it="3 passi verso l'energia condivisa" data-en="3 steps to shared energy" class="i18n">3 passi verso l'energia condivisa</h2>
+    </div>
+    <div class="grid-3" style="position:relative">
+      <div style="position:absolute;top:52px;left:calc(16.66% + 24px);right:calc(16.66% + 24px);border-top:2.5px dashed var(--bl)"></div>
+      <div class="card reveal" style="padding:32px 22px;text-align:center;transition-delay:0.1s;position:relative">
+        <div style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;background:var(--orange);color:white;display:flex;align-items:center;justify-content:center;font-family:'Patrick Hand',cursive;font-size:20px;border:3px solid white;box-shadow:2px 2px 0 var(--pd)">1</div>
+        <img src="../assets/svg/icons/solar-panel.svg" width="56" height="56" alt="" style="margin-bottom:14px">
+        <h3 data-it="Produci" data-en="Produce" class="i18n">Produci</h3>
+        <p style="margin-top:8px;font-size:.91rem" data-it="Pannelli solari sul tetto producono energia pulita per tutta la comunità." data-en="Solar panels on the roof produce clean energy for the whole community." class="i18n">Pannelli solari sul tetto producono energia pulita per tutta la comunità.</p>
+      </div>
+      <div class="card reveal" style="padding:32px 22px;text-align:center;transition-delay:0.2s;position:relative">
+        <div style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;font-family:'Patrick Hand',cursive;font-size:20px;border:3px solid white;box-shadow:2px 2px 0 var(--pd)">2</div>
+        <img src="../assets/svg/icons/community.svg" width="56" height="56" alt="" style="margin-bottom:14px">
+        <h3 data-it="Condividi" data-en="Share" class="i18n">Condividi</h3>
+        <p style="margin-top:8px;font-size:.91rem" data-it="Energia condivisa virtualmente tra i soci. Zero infrastruttura aggiuntiva." data-en="Energy virtually shared among members. Zero additional infrastructure." class="i18n">Energia condivisa virtualmente tra i soci. Zero infrastruttura aggiuntiva.</p>
+      </div>
+      <div class="card reveal" style="padding:32px 22px;text-align:center;transition-delay:0.3s;position:relative">
+        <div style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;font-family:'Patrick Hand',cursive;font-size:20px;border:3px solid white;box-shadow:2px 2px 0 var(--pd)">3</div>
+        <img src="../assets/svg/icons/savings.svg" width="56" height="56" alt="" style="margin-bottom:14px">
+        <h3 data-it="Risparmia" data-en="Save" class="i18n">Risparmia</h3>
+        <p style="margin-top:8px;font-size:.91rem" data-it="Incentivi GSE fino a 110 €/MWh + riduzione bolletta per ogni socio." data-en="GSE incentives up to €110/MWh + bill reduction for every member." class="i18n">Incentivi GSE fino a 110 €/MWh + riduzione bolletta per ogni socio.</p>
+      </div>
+    </div>
+    <div class="text-center reveal" style="margin-top:36px;transition-delay:0.4s">
+      <a href="servizi.html" class="btn-secondary" data-it="Approfondisci →" data-en="Learn more →" class="i18n">Approfondisci →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIAL STRIP ══ -->
+<section class="section-dark section-pad" style="overflow:hidden;position:relative">
+  <div style="position:absolute;top:-80px;right:-80px;width:360px;height:360px;background:rgba(255,255,255,0.03);border-radius:50%"></div>
+  <div style="position:absolute;bottom:-60px;left:-60px;width:240px;height:240px;background:rgba(247,201,72,0.05);border-radius:50%"></div>
+  <div class="wrap">
+    <div class="reveal text-center" style="max-width:560px;margin:0 auto 42px">
+      <span class="eyebrow" data-it="Cosa dicono di noi" data-en="What they say" class="i18n">Cosa dicono di noi</span>
+      <h2 data-it="Chi ha scelto CiviSun" data-en="Those who chose CiviSun" class="i18n">Chi ha scelto CiviSun</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal" style="padding:24px;position:relative;transition-delay:0.1s">
+        <div style="position:absolute;top:-12px;left:14px;font-family:'Playfair Display',serif;font-size:52px;color:var(--yellow);line-height:1">"</div>
+        <p style="font-style:italic;font-size:.92rem;margin-top:10px;color:var(--brown)" data-it="CiviSun ha gestito tutta la burocrazia GSE. La nostra CER da 22 famiglie è operativa e abbiamo ridotto la bolletta del 35%." data-en="CiviSun handled all the GSE paperwork. Our 22-family CER is live and we've cut the bill by 35%." class="i18n">CiviSun ha gestito tutta la burocrazia GSE. La nostra CER da 22 famiglie è operativa e abbiamo ridotto la bolletta del 35%.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;gap:10px">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:white">MR</div>
+          <div><strong style="font-size:.9rem">Marco Rizzoli</strong><p style="font-size:.76rem;margin-top:1px">Amministratore di Condominio · Bergamo</p></div>
+        </div>
+      </div>
+      <div class="card reveal" style="padding:24px;position:relative;transition-delay:0.2s">
+        <div style="position:absolute;top:-12px;left:14px;font-family:'Playfair Display',serif;font-size:52px;color:var(--yellow);line-height:1">"</div>
+        <p style="font-style:italic;font-size:.92rem;margin-top:10px;color:var(--brown)" data-it="CER Monitor è eccezionale: ogni socio vede quanto risparmia in tempo reale. La trasparenza ha rafforzato la nostra comunità." data-en="CER Monitor is exceptional: every member sees savings in real time. Transparency has strengthened our community." class="i18n">CER Monitor è eccezionale: ogni socio vede quanto risparmia in tempo reale.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;gap:10px">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:white">SF</div>
+          <div><strong style="font-size:.9rem">Silvia Ferri</strong><p style="font-size:.76rem;margin-top:1px">Presidente CER Dalmine Sole</p></div>
+        </div>
+      </div>
+      <div class="card reveal" style="padding:24px;position:relative;transition-delay:0.3s">
+        <div style="position:absolute;top:-12px;left:14px;font-family:'Playfair Display',serif;font-size:52px;color:var(--yellow);line-height:1">"</div>
+        <p style="font-style:italic;font-size:.92rem;margin-top:10px;color:var(--brown)" data-it="Come Comune avevamo bisogno di un partner esperto. CiviSun è stato ideale: competente, veloce e sempre disponibile." data-en="As a municipality we needed an expert partner. CiviSun was ideal: competent, fast and always available." class="i18n">Come Comune avevamo bisogno di un partner esperto. CiviSun è stato ideale.</p>
+        <div style="margin-top:16px;display:flex;align-items:center;gap:10px">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--rust);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:white">AL</div>
+          <div><strong style="font-size:.9rem">Andrea Longo</strong><p style="font-size:.76rem;margin-top:1px">Assessore Ambiente · Treviglio</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINALE ══ -->
+<section class="section-pad watermark-section">
+  <div class="wrap text-center">
+    <div class="reveal">
+      <div class="postit tape" style="--r:-0.5deg;display:inline-block;padding:32px 44px;max-width:640px">
+        <h2 data-it="Pronto ad avviare la tua CER?" data-en="Ready to start your CER?" class="i18n">Pronto ad avviare la tua CER?</h2>
+        <p style="margin-top:12px" data-it="Ricevi una consulenza gratuita e scopri quanto puoi risparmiare. Risposta garantita in 24 ore." data-en="Get a free consultation and find out how much you can save. Reply guaranteed within 24 hours." class="i18n">Ricevi una consulenza gratuita. Risposta in 24 ore.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+          <a href="contatti.html" class="btn-primary" data-it="Contattaci ora" data-en="Contact us now" class="i18n">Contattaci ora →</a>
+          <a href="cer-monitor.html" class="btn-secondary" data-it="Richiedi demo" data-en="Request demo" class="i18n">Richiedi demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <img src="../assets/img/logo-kraft.jpg" alt="CiviSun">
+        <span>CiviSun</span>
+      </div>
+      <p data-it="Startup italiana specializzata in Comunità Energetiche Rinnovabili. Consulenza GSE, CER Monitor SaaS e supporto PNRR per condomini, PMI e Comuni."
+         data-en="Italian startup specializing in Renewable Energy Communities. GSE consulting, CER Monitor SaaS and PNRR support." class="i18n">Startup italiana specializzata in Comunità Energetiche Rinnovabili.</p>
+      <div class="footer-social" style="margin-top:16px">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 20 20" fill="white" width="16" height="16"><path d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM7 15H5V8h2v7zm-1-8a1 1 0 110-2 1 1 0 010 2zm9 8h-2v-3.5c0-1-.8-1.5-1.5-1.5S10 10.5 10 11.5V15H8V8h2v1a3 3 0 015 2v4z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 20 20" fill="white" width="16" height="16"><path fill-rule="evenodd" d="M10 2c-2.2 0-2.5 0-3.4.05-2.2.1-3.4 1.3-3.5 3.5C3 6.5 3 6.8 3 10s0 3.5.05 3.4c.1 2.2 1.3 3.4 3.5 3.5.9.05 1.2.05 3.4.05s2.5 0 3.4-.05c2.2-.1 3.4-1.3 3.5-3.5.05-.9.05-1.2.05-3.4s0-2.5-.05-3.4c-.1-2.2-1.3-3.4-3.5-3.5C12.5 2 12.2 2 10 2zm0 1.8c2.1 0 2.4 0 3.2.05 1.5.07 2.1.7 2.17 2.17.05.8.05 1.1.05 3.2s0 2.4-.05 3.2c-.07 1.5-.67 2.1-2.17 2.17-.8.05-1.1.05-3.2.05s-2.4 0-3.2-.05C5.3 14.5 4.7 13.9 4.63 12.4 4.58 11.6 4.58 11.3 4.58 9.2s0-2.4.05-3.2C4.7 4.5 5.3 3.9 6.8 3.83 7.6 3.78 7.9 3.78 10 3.78zm0 3a3.2 3.2 0 100 6.4A3.2 3.2 0 0010 6.8zm0 1.8a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8zm3.3-3.2a.75.75 0 100 1.5.75.75 0 000-1.5z" clip-rule="evenodd"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-it="Servizi" data-en="Services" class="i18n">Servizi</h4>
+      <ul class="footer-links">
+        <li><a href="servizi.html"      data-it="Consulenza CER"   data-en="CER Consulting"   class="i18n">Consulenza CER</a></li>
+        <li><a href="cer-monitor.html"  data-it="CER Monitor"      data-en="CER Monitor"      class="i18n">CER Monitor</a></li>
+        <li><a href="servizi.html"      data-it="Supporto GSE"     data-en="GSE Support"      class="i18n">Supporto GSE</a></li>
+        <li><a href="servizi.html"      data-it="Accesso PNRR"     data-en="PNRR Access"      class="i18n">Accesso PNRR</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-it="Risorse" data-en="Resources" class="i18n">Risorse</h4>
+      <ul class="footer-links">
+        <li><a href="notizie.html"  data-it="Notizie"       data-en="News"          class="i18n">Notizie</a></li>
+        <li><a href="eventi.html"   data-it="Eventi"        data-en="Events"        class="i18n">Eventi</a></li>
+        <li><a href="https://www.gse.it" target="_blank">GSE.it ↗</a></li>
+        <li><a href="chi-siamo.html" data-it="Chi siamo"   data-en="About us"       class="i18n">Chi siamo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-it="Azienda" data-en="Company" class="i18n">Azienda</h4>
+      <ul class="footer-links">
+        <li><a href="contatti.html" data-it="Contattaci"          data-en="Contact us"         class="i18n">Contattaci</a></li>
+        <li><a href="#"             data-it="Privacy Policy"       data-en="Privacy Policy"     class="i18n">Privacy Policy</a></li>
+        <li><a href="#"             data-it="Termini di Servizio"  data-en="Terms of Service"   class="i18n">Termini di Servizio</a></li>
+        <li><a href="#"             data-it="Cookie Policy"        data-en="Cookie Policy"      class="i18n">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-it="© 2025 CiviSun Srl · Dalmine (BG) · P.IVA 00000000000"
+          data-en="© 2025 CiviSun Srl · Dalmine (BG) Italy · VAT 00000000000" class="i18n">
+      © 2025 CiviSun Srl · Dalmine (BG) · P.IVA 00000000000
+    </span>
+    <span style="font-family:'Patrick Hand',cursive;font-size:14px;color:var(--yellow)"
+          data-it="Energia per la Comunità ☀️" data-en="Energy for the Community ☀️" class="i18n">
+      Energia per la Comunità ☀️
+    </span>
+  </div>
+</footer>
+<div id="cookie-banner">
+  <span data-it="🍪 Utilizziamo cookie tecnici per migliorare la tua esperienza. Nessun dato ceduto a terzi."
+        data-en="🍪 We use technical cookies to improve your experience. No data sold to third parties." class="i18n">
+    🍪 Utilizziamo cookie tecnici per migliorare la tua esperienza.
+  </span>
+  <div class="ck-btns">
+    <button class="ck-btn ck-accept" data-it="Accetta" data-en="Accept" class="i18n">Accetta</button>
+    <button class="ck-btn ck-reject" data-it="Solo essenziali" data-en="Essential only" class="i18n">Solo essenziali</button>
+  </div>
+</div>
+</div>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

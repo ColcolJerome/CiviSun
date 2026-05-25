@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Pannello FV inclinato su tetto -->
+  <rect x="8" y="22" width="48" height="28" rx="3" fill="#2a4a7f" stroke="#1a3060" stroke-width="1.5"/>
+  <line x1="8" y1="36" x2="56" y2="36" stroke="#4a7abf" stroke-width="1.2"/>
+  <line x1="8" y1="29" x2="56" y2="29" stroke="#4a7abf" stroke-width="1.2"/>
+  <line x1="8" y1="43" x2="56" y2="43" stroke="#4a7abf" stroke-width="1.2"/>
+  <line x1="24" y1="22" x2="24" y2="50" stroke="#4a7abf" stroke-width="1.2"/>
+  <line x1="40" y1="22" x2="40" y2="50" stroke="#4a7abf" stroke-width="1.2"/>
+  <!-- Riflesso luce -->
+  <path d="M12 26 L20 26 L16 34 Z" fill="rgba(255,255,255,0.12)"/>
+  <path d="M28 26 L36 26 L32 34 Z" fill="rgba(255,255,255,0.12)"/>
+  <!-- Cavi -->
+  <path d="M32 50 L32 58" stroke="#888" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="32" cy="58" r="2.5" fill="#888"/>
+  <!-- Sole piccolo in alto -->
+  <circle cx="52" cy="10" r="5" fill="#f7c948"/>
+  <g stroke="#f7c948" stroke-width="1.5" stroke-linecap="round">
+    <line x1="52" y1="3" x2="52" y2="1"/>
+    <line x1="57" y1="5" x2="59" y2="3"/>
+    <line x1="59" y1="10" x2="61" y2="10"/>
+    <line x1="57" y1="15" x2="59" y2="17"/>
+    <line x1="47" y1="5" x2="45" y2="3"/>
+    <line x1="45" y1="10" x2="43" y2="10"/>
+  </g>
+</svg>

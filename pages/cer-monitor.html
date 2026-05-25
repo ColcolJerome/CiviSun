@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CER Monitor · CiviSun</title>
+<meta name="description" content="CiviSun — Comunità Energetiche Rinnovabili. Dalmine (BG).">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Patrick+Hand&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+
+</head>
+<body>
+<div id="loader">
+  <div style="position:relative;display:flex;align-items:center;justify-content:center">
+    <div id="loader-ring"></div>
+    <img id="loader-logo-img" src="../assets/img/logo-kraft.jpg" alt="CiviSun logo">
+  </div>
+  <div id="loader-brand">CiviSun</div>
+  <div id="loader-tagline">Energia per la Comunità</div>
+  <div class="loader-dots"><div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div></div>
+</div>
+<div id="progress-bar"></div>
+<button id="back-top" aria-label="Torna in cima">
+  <svg viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<nav id="navbar">
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="../assets/img/logo-kraft.jpg" alt="CiviSun">
+    <span class="nav-logo-text">Civi<span>Sun</span></span>
+  </a>
+  <ul class="nav-links"><li><a href="chi-siamo.html" data-it="Chi Siamo" data-en="About" class="i18n">Chi Siamo</a></li><li><a href="servizi.html" data-it="Servizi" data-en="Services" class="i18n">Servizi</a></li><li><a href="cer-monitor.html" class="active" data-it="CER Monitor" data-en="CER Monitor" class="i18n">CER Monitor</a></li><li><a href="notizie.html" data-it="Notizie" data-en="News" class="i18n">Notizie</a></li><li><a href="eventi.html" data-it="Eventi" data-en="Events" class="i18n">Eventi</a></li><li><a href="contatti.html" data-it="Contatti" data-en="Contact" class="i18n">Contatti</a></li></ul>
+  <div class="nav-right">
+    <div class="lang-toggle"><button class="lang-btn active" data-lang="it">IT</button><button class="lang-btn" data-lang="en">EN</button></div>
+    <a class="btn-nav" href="contatti.html" data-it="Diventa Socio" data-en="Join Us" class="i18n">Diventa Socio</a>
+    <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="chi-siamo.html" data-it="Chi Siamo" data-en="About" class="i18n">Chi Siamo</a>
+  <a href="servizi.html" data-it="Servizi" data-en="Services" class="i18n">Servizi</a>
+  <a href="cer-monitor.html" data-it="CER Monitor" data-en="CER Monitor" class="i18n">CER Monitor</a>
+  <a href="notizie.html" data-it="Notizie" data-en="News" class="i18n">Notizie</a>
+  <a href="eventi.html" data-it="Eventi" data-en="Events" class="i18n">Eventi</a>
+  <a href="contatti.html" data-it="Contatti" data-en="Contact" class="i18n">Contatti</a>
+</div>
+<div id="site" style="opacity:0">
+
+<div class="page-header section-dark" style="background:var(--bd)">
+  <div class="page-header-inner">
+    <span class="eyebrow" style="color:var(--yellow)" data-it="Il prodotto" data-en="The product" class="i18n">Il prodotto</span>
+    <h1 style="margin-top:8px;color:white" data-it="CER Monitor" data-en="CER Monitor" class="i18n"><span class="hl-yellow">CER</span> Monitor</h1>
+    <p class="lead" style="margin-top:14px;max-width:560px;color:var(--paper)" data-it="La dashboard SaaS proprietaria di CiviSun per il monitoraggio in tempo reale della tua Comunità Energetica Rinnovabile." data-en="CiviSun's proprietary SaaS dashboard for real-time monitoring of your Renewable Energy Community." class="i18n">La dashboard SaaS proprietaria di CiviSun per il monitoraggio in tempo reale.</p>
+  </div>
+</div>
+
+<!-- Bordo strappato stile carta -->
+<div class="torn-edge" aria-hidden="true">
+  <svg viewBox="0 0 1440 36" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 L0,28 Q30,36 60,28 Q90,20 120,28 Q150,36 180,28 Q210,20 240,28 Q270,36 300,28 Q330,20 360,28 Q400,36 440,28 Q480,20 520,28 Q560,36 600,28 Q640,20 680,28 Q720,36 760,28 Q800,20 840,28 Q880,36 920,28 Q960,20 1000,28 Q1040,36 1080,28 Q1120,20 1160,28 Q1200,36 1240,28 Q1280,20 1320,28 Q1380,36 1440,28 L1440,0 Z"
+      fill="#f5efe0"/>
+  </svg>
+</div>
+<section class="section-pad watermark-section">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center" class="mon-grid">
+      <div class="reveal-left">
+        <span class="eyebrow" data-it="Funzionalità principali" data-en="Key features" class="i18n">Funzionalità principali</span>
+        <h2 style="margin-top:8px" data-it="Una finestra in tempo reale sulla tua energia" data-en="A real-time window into your energy" class="i18n">Una finestra in tempo reale sulla tua energia</h2>
+        <p style="margin-top:14px" data-it="CER Monitor trasforma dati complessi in insight chiari e azionabili. Scopri quanta energia sta producendo la tua comunità, quanto stai risparmiando e quanta CO₂ hai evitato." data-en="CER Monitor transforms complex data into clear, actionable insights. See how much energy your community is producing, how much you're saving, and how much CO₂ you've avoided." class="i18n">CER Monitor trasforma dati complessi in insight chiari e azionabili.</p>
+        <ul style="list-style:none;margin:22px 0">
+          <li style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--pd)">
+            <img src="../assets/svg/icons/lightning.svg" width="24" height="24" alt="" style="flex-shrink:0;margin-top:2px">
+            <span style="font-size:.93rem;color:var(--brown)" data-it="Aggiornamento ogni 15 min dai contatori GSE" data-en="Updated every 15 min from GSE meters" class="i18n">Aggiornamento ogni 15 min dai contatori GSE</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--pd)">
+            <img src="../assets/svg/icons/lightning.svg" width="24" height="24" alt="" style="flex-shrink:0;margin-top:2px">
+            <span style="font-size:.93rem;color:var(--brown)" data-it="Grafici interattivi giornalieri, settimanali, annuali" data-en="Interactive daily, weekly, annual charts" class="i18n">Grafici interattivi giornalieri, settimanali, annuali</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--pd)">
+            <img src="../assets/svg/icons/lightning.svg" width="24" height="24" alt="" style="flex-shrink:0;margin-top:2px">
+            <span style="font-size:.93rem;color:var(--brown)" data-it="Report automatici PDF con storico e trend" data-en="Automatic PDF reports with history and trends" class="i18n">Report automatici PDF con storico e trend</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--pd)">
+            <img src="../assets/svg/icons/lightning.svg" width="24" height="24" alt="" style="flex-shrink:0;margin-top:2px">
+            <span style="font-size:.93rem;color:var(--brown)" data-it="Notifiche push per anomalie e picchi di produzione" data-en="Push notifications for anomalies and production peaks" class="i18n">Notifiche push per anomalie e picchi di produzione</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--pd)">
+            <img src="../assets/svg/icons/lightning.svg" width="24" height="24" alt="" style="flex-shrink:0;margin-top:2px">
+            <span style="font-size:.93rem;color:var(--brown)" data-it="Rendiconto mensile automatico per ogni socio" data-en="Automatic monthly statement for each member" class="i18n">Rendiconto mensile automatico per ogni socio</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:12px;padding:11px 0">
+            <img src="../assets/svg/icons/lightning.svg" width="24" height="24" alt="" style="flex-shrink:0;margin-top:2px">
+            <span style="font-size:.93rem;color:var(--brown)" data-it="Interfaccia bilingua IT/EN · dark &amp; light mode" data-en="Bilingual IT/EN interface · dark &amp; light mode" class="i18n">Interfaccia bilingua IT/EN · dark &amp; light mode</span>
+          </li>
+        </ul>
+        <a href="contatti.html" class="btn-primary">
+          <span data-it="Richiedi una demo gratuita" data-en="Request a free demo" class="i18n">Richiedi una demo gratuita</span> →
+        </a>
+      </div>
+
+      <!-- Mockup dashboard -->
+      <div class="reveal-right" style="transition-delay:0.2s">
+        <div style="background:#1a1a2e;border-radius:18px;border:1.5px solid rgba(255,255,255,0.1);overflow:hidden;box-shadow:0 28px 72px rgba(0,0,0,0.45)">
+          <div style="background:#2a2a3e;padding:11px 16px;display:flex;align-items:center;gap:7px;border-bottom:1px solid rgba(255,255,255,0.08)">
+            <div style="width:11px;height:11px;border-radius:50%;background:#ff5f56"></div>
+            <div style="width:11px;height:11px;border-radius:50%;background:#ffbd2e"></div>
+            <div style="width:11px;height:11px;border-radius:50%;background:#27c93f"></div>
+            <span style="margin-left:10px;font-family:'Patrick Hand',cursive;color:#8888aa;font-size:12px">CER Monitor · dashboard · live</span>
+            <span style="margin-left:auto;font-size:10px;color:#4a9e3f;font-weight:800">● LIVE</span>
+          </div>
+          <div style="padding:18px">
+            <!-- KPI row -->
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:14px">
+              <div style="background:#2a2a3e;border-radius:10px;padding:12px;text-align:center">
+                <span id="m-prod" style="font-size:1.4rem;font-weight:800;color:#f7c948;display:block">62.4</span>
+                <span style="font-size:.65rem;color:#9090b8;display:block;margin-top:2px" data-it="kWh oggi" data-en="kWh today" class="i18n">kWh oggi</span>
+              </div>
+              <div style="background:#2a2a3e;border-radius:10px;padding:12px;text-align:center">
+                <span style="font-size:1.4rem;font-weight:800;color:#7bc86c;display:block">87%</span>
+                <span style="font-size:.65rem;color:#9090b8;display:block;margin-top:2px" data-it="autoconsumo" data-en="self-cons." class="i18n">autoconsumo</span>
+              </div>
+              <div style="background:#2a2a3e;border-radius:10px;padding:12px;text-align:center">
+                <span style="font-size:1.4rem;font-weight:800;color:#e8873a;display:block">38€</span>
+                <span style="font-size:.65rem;color:#9090b8;display:block;margin-top:2px" data-it="incentivi/mese" data-en="incentives/mo" class="i18n">incentivi/mese</span>
+              </div>
+            </div>
+            <!-- Grafico barre animato -->
+            <div id="mock-bars" style="background:#2a2a3e;border-radius:10px;padding:14px;height:94px;display:flex;align-items:flex-end;gap:4px;justify-content:center"></div>
+            <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-family:'Patrick Hand',cursive;font-size:10px;color:#7777aa" data-it="Produzione oggi (kWh) — 6:00 → 19:00" data-en="Today's production (kWh) — 6:00 → 19:00" class="i18n">Produzione oggi (kWh) — 6:00 → 19:00</span>
+            </div>
+            <!-- CO2 row -->
+            <div style="margin-top:12px;background:#2a2a3e;border-radius:10px;padding:12px;display:flex;align-items:center;gap:12px">
+              <img src="../assets/svg/icons/leaf.svg" width="28" height="28" alt="">
+              <div>
+                <span style="font-size:.7rem;color:#9090b8;display:block" data-it="CO₂ evitata questo mese" data-en="CO₂ avoided this month" class="i18n">CO₂ evitata questo mese</span>
+                <span style="font-size:1.1rem;font-weight:800;color:#7bc86c">1.24 ton</span>
+              </div>
+              <div style="margin-left:auto;text-align:right">
+                <span style="font-size:.7rem;color:#9090b8;display:block" data-it="Alberi equivalenti" data-en="Equivalent trees" class="i18n">Alberi equivalenti</span>
+                <span style="font-size:1.1rem;font-weight:800;color:#f7c948">≈ 56</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>.mon-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}@media(max-width:960px){.mon-grid{grid-template-columns:1fr}}</style>
+
+<!-- FAQ CER Monitor -->
+<section class="section-pad" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="reveal text-center" style="max-width:560px;margin:0 auto 40px">
+      <span class="eyebrow" data-it="Domande frequenti" data-en="FAQ" class="i18n">Domande frequenti</span>
+      <h2 style="margin-top:8px" data-it="Tutto su CER Monitor" data-en="Everything about CER Monitor" class="i18n">Tutto su CER Monitor</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto" class="reveal">
+      <div class="faq-item"><div class="faq-question"><span data-it="CER Monitor è gratuito?" data-en="Is CER Monitor free?" class="i18n">CER Monitor è gratuito?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p data-it="CER Monitor è disponibile in abbonamento mensile. Offriamo 30 giorni di prova gratuita senza carta di credito. Sconto del 20% per le CER costituite con il supporto di CiviSun." data-en="CER Monitor is available on a monthly subscription. We offer a 30-day free trial with no credit card. 20% discount for CERs formed with CiviSun's support." class="i18n">CER Monitor è in abbonamento con 30 giorni gratuiti. Sconto 20% per chi usa anche la nostra consulenza.</p></div></div>
+      <div class="faq-item"><div class="faq-question"><span data-it="Funziona con qualsiasi CER?" data-en="Does it work with any CER?" class="i18n">Funziona con qualsiasi CER?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p data-it="Sì. CER Monitor si integra con qualsiasi CER già costituita in Italia, purché abbiano contatori GSE attivi. Non è necessario aver usato CiviSun per la fase di consulenza." data-en="Yes. CER Monitor integrates with any CER already constituted in Italy, provided they have active GSE meters. It's not necessary to have used CiviSun for the consulting phase." class="i18n">Sì. Si integra con qualsiasi CER italiana con contatori GSE attivi.</p></div></div>
+      <div class="faq-item"><div class="faq-question"><span data-it="Esiste una app mobile?" data-en="Is there a mobile app?" class="i18n">Esiste una app mobile?</span><span class="faq-icon">+</span></div><div class="faq-answer"><p data-it="Sì. CER Monitor è disponibile come web app responsive e come app nativa iOS/Android per i soci della CER. L'app mostra i dati live, i rendiconti mensili e le notifiche push." data-en="Yes. CER Monitor is available as a responsive web app and as a native iOS/Android app for CER members. The app shows live data, monthly statements and push notifications." class="i18n">Sì, app nativa iOS/Android con dati live, rendiconti e notifiche push.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><img src="../assets/img/logo-kraft.jpg" alt="CiviSun"><span>CiviSun</span></div>
+      <p data-it="Startup italiana specializzata in CER. Consulenza GSE, CER Monitor SaaS e supporto PNRR." data-en="Italian startup specializing in CERs. GSE consulting, CER Monitor SaaS and PNRR support." class="i18n">Startup italiana specializzata in CER.</p>
+      <div class="footer-social" style="margin-top:14px">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 20 20" fill="white" width="16" height="16"><path d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM7 15H5V8h2v7zm-1-8a1 1 0 110-2 1 1 0 010 2zm9 8h-2v-3.5c0-1-.8-1.5-1.5-1.5S10 10.5 10 11.5V15H8V8h2v1a3 3 0 015 2v4z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Servizi</h4><ul class="footer-links"><li><a href="servizi.html" data-it="Consulenza CER" data-en="CER Consulting" class="i18n">Consulenza CER</a></li><li><a href="cer-monitor.html">CER Monitor</a></li><li><a href="servizi.html" data-it="Supporto GSE" data-en="GSE Support" class="i18n">Supporto GSE</a></li></ul></div>
+    <div class="footer-col"><h4 data-it="Risorse" data-en="Resources" class="i18n">Risorse</h4><ul class="footer-links"><li><a href="notizie.html" data-it="Notizie" data-en="News" class="i18n">Notizie</a></li><li><a href="eventi.html" data-it="Eventi" data-en="Events" class="i18n">Eventi</a></li><li><a href="https://www.gse.it" target="_blank">GSE.it ↗</a></li></ul></div>
+    <div class="footer-col"><h4 data-it="Azienda" data-en="Company" class="i18n">Azienda</h4><ul class="footer-links"><li><a href="contatti.html" data-it="Contattaci" data-en="Contact us" class="i18n">Contattaci</a></li><li><a href="#" data-it="Privacy" data-en="Privacy" class="i18n">Privacy</a></li><li><a href="#" data-it="Termini" data-en="Terms" class="i18n">Termini</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span data-it="© 2025 CiviSun Srl · Dalmine (BG) · P.IVA 00000000000" data-en="© 2025 CiviSun Srl · Dalmine (BG) Italy" class="i18n">© 2025 CiviSun Srl · Dalmine (BG) · P.IVA 00000000000</span>
+    <span style="font-family:'Patrick Hand',cursive;font-size:14px;color:var(--yellow)" data-it="Energia per la Comunità ☀️" data-en="Energy for the Community ☀️" class="i18n">Energia per la Comunità ☀️</span>
+  </div>
+</footer>
+<div id="cookie-banner">
+  <span data-it="🍪 Utilizziamo cookie tecnici. Nessun dato ceduto a terzi." data-en="🍪 We use technical cookies. No data sold to third parties." class="i18n">🍪 Utilizziamo cookie tecnici. Nessun dato ceduto a terzi.</span>
+  <div class="ck-btns"><button class="ck-btn ck-accept" data-it="Accetta" data-en="Accept" class="i18n">Accetta</button><button class="ck-btn ck-reject" data-it="Solo essenziali" data-en="Essential only" class="i18n">Solo essenziali</button></div>
+</div>
+</div>
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+// Mockup chart CER Monitor — barre animate
+(function(){
+  const vals=[2,8,18,32,45,55,62,58,52,40,28,15,5,1];
+  const mx=Math.max(...vals);
+  const el=document.getElementById('mock-bars');
+  if(!el) return;
+  vals.forEach((v,i)=>{
+    const b=document.createElement('div');
+    b.style.cssText='background:'+(i===6?'#f7c948':'#4a9e3f')+';border-radius:3px 3px 0 0;width:19px;height:4px;transition:height .6s ease '+i*.04+'s;flex-shrink:0';
+    el.appendChild(b);
+    setTimeout(()=>{ b.style.height=Math.max(4,(v/mx)*74)+'px'; }, 900);
+  });
+  // Live update
+  let v=62.4;
+  const mp=document.getElementById('m-prod');
+  setInterval(()=>{
+    v+=(Math.random()-.45)*.9; v=Math.max(58,Math.min(67,v));
+    if(mp) mp.textContent=v.toFixed(1);
+  },2400);
+})();
+</script>
+</body>
+</html>

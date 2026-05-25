@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  bg-tile.svg — Pattern di sfondo CiviSun (ispirazione WhatsApp)
+  Tile 120x120px, si ripete seamlessly.
+  Motivi: mezzi soli, foglie, cerchi — palette neutra su cream.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .m { fill: #6b4c2a; opacity: 0.7; }
+    </style>
+  </defs>
+
+  <!-- Mezzo sole (centro tile) -->
+  <g transform="translate(60,60)">
+    <path class="m" d="M0,-14 L1.5,-8 L5,-12 L3,-6.5 L7.5,-9 L4.5,-4 L9,-5 L5.5,-0.5 L10,0 L5.5,0.5 L9,5 L4.5,4 L7.5,9 L3,6.5 L5,12 L1.5,8 L0,14 L-1.5,8 L-5,12 L-3,6.5 L-7.5,9 L-4.5,4 L-9,5 L-5.5,0.5 L-10,0 L-5.5,-0.5 L-9,-5 L-4.5,-4 L-7.5,-9 L-3,-6.5 L-5,-12 L-1.5,-8 Z"/>
+    <circle cx="0" cy="0" r="5.5" class="m"/>
+  </g>
+
+  <!-- Fogliolina in alto a destra -->
+  <g transform="translate(98,22) rotate(-30)">
+    <ellipse class="m" cx="0" cy="0" rx="5" ry="9"/>
+    <line x1="0" y1="-9" x2="0" y2="9" stroke="#6b4c2a" stroke-width="0.7" opacity="0.7"/>
+  </g>
+
+  <!-- Fogliolina in basso a sinistra -->
+  <g transform="translate(22,96) rotate(45)">
+    <ellipse class="m" cx="0" cy="0" rx="4.5" ry="8"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#6b4c2a" stroke-width="0.6" opacity="0.7"/>
+  </g>
+
+  <!-- Piccolo cerchio in alto a sinistra -->
+  <circle class="m" cx="18" cy="18" r="4"/>
+
+  <!-- Piccolo cerchio in basso a destra -->
+  <circle class="m" cx="102" cy="102" r="3.5"/>
+
+  <!-- Raggio sole isolato angolo -->
+  <g transform="translate(4,60)">
+    <rect class="m" x="-1.5" y="-7" width="3" height="7" rx="1.5"/>
+  </g>
+  <g transform="translate(116,60)">
+    <rect class="m" x="-1.5" y="-7" width="3" height="7" rx="1.5"/>
+  </g>
+
+  <!-- Puntini energia -->
+  <circle class="m" cx="60" cy="10" r="1.8"/>
+  <circle class="m" cx="60" cy="110" r="1.8"/>
+  <circle class="m" cx="10" cy="60" r="1.8"/>
+  <circle class="m" cx="110" cy="60" r="1.8"/>
+</svg>

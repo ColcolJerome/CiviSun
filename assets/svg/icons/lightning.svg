@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Fulmine energia -->
+  <path d="M38 6 L18 36 L30 36 L26 58 L46 28 L34 28 Z" fill="#f7c948" stroke="#d4a820" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Alone luminoso -->
+  <path d="M38 6 L18 36 L30 36 L26 58 L46 28 L34 28 Z" fill="#ffe07a" opacity="0.4"/>
+</svg>

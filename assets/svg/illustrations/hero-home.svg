@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  hero-home.svg — Illustrazione hero principale CiviSun
+  Mostra: paesaggio con casa solare, sole, alberi, persone,
+  badge di risparmio e frecce energia.
+  Stile: piatto, warm palette, carta/cartone.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" width="520" height="400">
+  <!-- Sfondo carta -->
+  <rect width="520" height="400" rx="24" fill="#f5efe0"/>
+  <!-- Grana sottile -->
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="n"/><feColorMatrix type="saturate" values="0" in="n" result="g"/><feBlend in="SourceGraphic" in2="g" mode="multiply" result="b"/><feComponentTransfer in="b"><feFuncA type="linear" slope="0.04"/></feComponentTransfer></filter>
+  <rect width="520" height="400" rx="24" filter="url(#grain)" opacity="1"/>
+
+  <!-- ── CIELO ── -->
+  <rect width="520" height="260" rx="0" fill="#e8f4fc" opacity="0.5"/>
+
+  <!-- Nuvole soffici -->
+  <g opacity="0.7">
+    <ellipse cx="80" cy="70" rx="38" ry="18" fill="white"/>
+    <ellipse cx="105" cy="62" rx="28" ry="20" fill="white"/>
+    <ellipse cx="60" cy="65" rx="22" ry="14" fill="white"/>
+  </g>
+  <g opacity="0.5">
+    <ellipse cx="390" cy="52" rx="32" ry="14" fill="white"/>
+    <ellipse cx="415" cy="44" rx="22" ry="16" fill="white"/>
+    <ellipse cx="372" cy="48" rx="18" ry="12" fill="white"/>
+  </g>
+
+  <!-- ── SOLE ── -->
+  <circle cx="400" cy="85" r="52" fill="#f7c948" opacity="0.15"/>
+  <circle cx="400" cy="85" r="40" fill="#f7c948" opacity="0.25"/>
+  <circle cx="400" cy="85" r="30" fill="#f7c948"/>
+  <!-- Raggi sole -->
+  <g stroke="#f7c948" stroke-width="3" stroke-linecap="round">
+    <line x1="400" y1="44" x2="400" y2="36"/>
+    <line x1="427" y1="58" x2="432" y2="51"/>
+    <line x1="441" y1="85" x2="449" y2="85"/>
+    <line x1="427" y1="112" x2="432" y2="119"/>
+    <line x1="400" y1="126" x2="400" y2="134"/>
+    <line x1="373" y1="112" x2="368" y2="119"/>
+    <line x1="359" y1="85"  x2="351" y2="85"/>
+    <line x1="373" y1="58"  x2="368" y2="51"/>
+  </g>
+  <!-- Faccia sorridente nel sole -->
+  <circle cx="393" cy="80" r="3" fill="#d4900a"/>
+  <circle cx="407" cy="80" r="3" fill="#d4900a"/>
+  <path d="M390 92 Q400 100 410 92" stroke="#d4900a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- ── TERRENO ── -->
+  <ellipse cx="260" cy="310" rx="280" ry="30" fill="#c8e8b8" opacity="0.6"/>
+  <rect x="0" y="295" width="520" height="105" fill="#7bc86c"/>
+  <rect x="0" y="316" width="520" height="84" fill="#6aae5a"/>
+  <!-- Erba ondulata -->
+  <path d="M0,296 Q40,286 80,296 Q120,306 160,296 Q200,286 240,296 Q280,306 320,296 Q360,286 400,296 Q440,306 480,296 L520,296 L520,320 L0,320Z" fill="#88c870"/>
+
+  <!-- ── CASA ── -->
+  <!-- Ombra -->
+  <ellipse cx="230" cy="302" rx="100" ry="12" fill="rgba(61,43,26,0.12)"/>
+  <!-- Corpo casa -->
+  <rect x="140" y="188" width="180" height="118" fill="white" stroke="#e8dcc8" stroke-width="2"/>
+  <!-- Finestre corpo -->
+  <rect x="155" y="205" width="40" height="32" rx="3" fill="#a3d9ee" stroke="#c8e8f8" stroke-width="1.5"/>
+  <line x1="175" y1="205" x2="175" y2="237" stroke="#c8e8f8" stroke-width="1.2"/>
+  <line x1="155" y1="221" x2="195" y2="221" stroke="#c8e8f8" stroke-width="1.2"/>
+  <rect x="265" y="205" width="40" height="32" rx="3" fill="#a3d9ee" stroke="#c8e8f8" stroke-width="1.5"/>
+  <line x1="285" y1="205" x2="285" y2="237" stroke="#c8e8f8" stroke-width="1.2"/>
+  <line x1="265" y1="221" x2="305" y2="221" stroke="#c8e8f8" stroke-width="1.2"/>
+  <!-- Porta -->
+  <rect x="206" y="248" width="48" height="58" rx="5" fill="#a07040"/>
+  <circle cx="248" cy="279" r="4" fill="#c4a77d"/>
+  <path d="M206 248 Q206 238 230 238 Q254 238 254 248" fill="#c08040" stroke="#a07040" stroke-width="1"/>
+  <!-- Tetto -->
+  <polygon points="125,195 230,110 335,195" fill="#c4523a" stroke="#a03020" stroke-width="1.5"/>
+  <polygon points="125,195 230,110 335,195" fill="none" stroke="#a03020" stroke-width="1.5"/>
+  <!-- Dettaglio mattoni tetto -->
+  <line x1="125" y1="195" x2="230" y2="110" stroke="#a03020" stroke-width="0.7" opacity="0.4"/>
+  <line x1="335" y1="195" x2="230" y2="110" stroke="#a03020" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- ── PANNELLI SOLARI SUL TETTO ── -->
+  <!-- Pannello sinistro -->
+  <g transform="translate(165,140) rotate(-28)">
+    <rect x="0" y="0" width="50" height="28" rx="3" fill="#2a4a7f" stroke="#1a3060" stroke-width="1.2"/>
+    <line x1="25" y1="0" x2="25" y2="28" stroke="#4a7abf" stroke-width="0.9"/>
+    <line x1="0" y1="14" x2="50" y2="14" stroke="#4a7abf" stroke-width="0.9"/>
+    <rect x="4" y="4" width="20" height="8" rx="1" fill="rgba(255,255,255,0.08)"/>
+  </g>
+  <!-- Pannello destro -->
+  <g transform="translate(248,138) rotate(28)">
+    <rect x="-50" y="0" width="50" height="28" rx="3" fill="#2a4a7f" stroke="#1a3060" stroke-width="1.2"/>
+    <line x1="-25" y1="0" x2="-25" y2="28" stroke="#4a7abf" stroke-width="0.9"/>
+    <line x1="-50" y1="14" x2="0" y2="14" stroke="#4a7abf" stroke-width="0.9"/>
+    <rect x="-46" y="4" width="20" height="8" rx="1" fill="rgba(255,255,255,0.08)"/>
+  </g>
+
+  <!-- ── ALBERI ── -->
+  <!-- Albero grande sinistra -->
+  <rect x="68" y="230" width="10" height="70" fill="#8b6030"/>
+  <ellipse cx="73" cy="215" rx="36" ry="42" fill="#4a9e3f"/>
+  <ellipse cx="60" cy="228" rx="24" ry="28" fill="#5aae4f"/>
+  <!-- Albero piccolo destra -->
+  <rect x="392" y="255" width="8" height="50" fill="#8b6030"/>
+  <ellipse cx="396" cy="242" rx="28" ry="32" fill="#6aae5a"/>
+  <ellipse cx="407" cy="252" rx="18" ry="22" fill="#7bc86c"/>
+  <!-- Cespuglio -->
+  <ellipse cx="130" cy="295" rx="22" ry="12" fill="#6aae5a"/>
+  <ellipse cx="118" cy="292" rx="16" ry="10" fill="#7bc86c"/>
+  <ellipse cx="350" cy="295" rx="18" ry="10" fill="#6aae5a"/>
+
+  <!-- ── PERSONE ── -->
+  <!-- Persona sinistra (blu-green) -->
+  <circle cx="48" cy="264" r="11" fill="#f5d5b0" stroke="#e0b890" stroke-width="1"/>
+  <path d="M34 305 Q34 285 48 285 Q62 285 62 305" fill="#4a9e3f"/>
+  <path d="M38 272 Q44 276 48 273 Q52 276 58 272" stroke="#8b6030" stroke-width="1.2" fill="none"/>
+  <!-- Persona destra (arancio) -->
+  <circle cx="472" cy="264" r="11" fill="#f5d5b0" stroke="#e0b890" stroke-width="1"/>
+  <path d="M458 305 Q458 285 472 285 Q486 285 486 305" fill="#e8873a"/>
+  <path d="M462 272 Q468 276 472 273 Q476 276 482 272" stroke="#8b6030" stroke-width="1.2" fill="none"/>
+  <!-- Persona centrale (verde scuro) -->
+  <circle cx="490" cy="258" r="9" fill="#f5d5b0"/>
+  <path d="M479 296 Q479 278 490 278 Q501 278 501 296" fill="#2d7a23"/>
+
+  <!-- ── FRECCE ENERGIA ── -->
+  <defs>
+    <marker id="arrowE" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 2L8 5L1 8" fill="none" stroke="#f7c948" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+  </defs>
+  <!-- Energia dal sole ai pannelli -->
+  <path d="M375,110 Q330,120 305,148" fill="none" stroke="#f7c948" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#arrowE)" opacity="0.9"/>
+  <!-- Energia dai pannelli alla rete -->
+  <path d="M200,170 Q185,200 180,235" fill="none" stroke="#4a9e3f" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowE)" opacity="0.8"/>
+
+  <!-- ── BADGE INFORMATIVI ── -->
+  <!-- Badge giallo in alto a destra -->
+  <rect x="328" y="24" width="138" height="46" rx="12" fill="#f7c948" opacity="0.96"/>
+  <rect x="328" y="24" width="138" height="46" rx="12" fill="none" stroke="#d4a820" stroke-width="1.2"/>
+  <text x="397" y="41" font-family="'Patrick Hand',cursive" font-size="11" fill="#3d2b1a" text-anchor="middle">Risparmio medio</text>
+  <text x="397" y="60" font-family="'Nunito',sans-serif" font-size="14" font-weight="800" fill="#2d7a23" text-anchor="middle">-38% in bolletta</text>
+
+  <!-- Badge bianco in basso a sinistra -->
+  <rect x="14" y="320" width="148" height="46" rx="12" fill="white" stroke="#e8dcc8" stroke-width="1.5" opacity="0.96"/>
+  <text x="88" y="337" font-family="'Patrick Hand',cursive" font-size="11" fill="#6b4c2a" text-anchor="middle">Incentivi GSE</text>
+  <text x="88" y="356" font-family="'Nunito',sans-serif" font-size="13" font-weight="800" fill="#e8873a" text-anchor="middle">fino a 110 €/MWh</text>
+
+  <!-- Badge verde scuro in basso a destra -->
+  <rect x="360" y="325" width="148" height="46" rx="12" fill="#2d7a23" opacity="0.95"/>
+  <text x="434" y="342" font-family="'Patrick Hand',cursive" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">CO₂ evitata</text>
+  <text x="434" y="361" font-family="'Nunito',sans-serif" font-size="13" font-weight="800" fill="white" text-anchor="middle">620 ton · anno 2025</text>
+
+  <!-- Decorazione matita -->
+  <rect x="14" y="165" width="7" height="34" rx="3" fill="#f7c948" transform="rotate(12,17,182)"/>
+  <polygon points="14,199 21,199 17.5,207" fill="#c4523a" transform="rotate(12,17,182)"/>
+</svg>
